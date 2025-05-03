@@ -21,6 +21,6 @@ WORKDIR /app
 # Copy the built JAR from the build stage
 COPY --from=build /app/target/*.jar app.jar
 
-EXPOSE ${SERVER_PORT:-8080}
+EXPOSE 8000
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
